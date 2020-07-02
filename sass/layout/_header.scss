@@ -1,0 +1,37 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(darken($color-grey-dark, 50%), 0.8),
+      rgba($color-grey-dark, 0.8)
+    ),
+    url("../img/header-background.jpg");
+  background-size: cover;
+  background-position: top;
+  /*
+  bennettfeely.com for clip paths
+  */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  &__logo-box {
+    /*
+    parent tag has to be relative for this to be absolute
+    */
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
